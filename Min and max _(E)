@@ -1,0 +1,35 @@
+import java.util.*;
+
+class MinAandMax{
+    public static int Mini(int[] a, int n){
+        int Minimum = a[0];
+        for (int i=0; i<a.length; i++){
+            if (a[i] < Minimum){
+                Minimum = a[i];
+            }
+        }
+        return Minimum;
+    }
+
+    public static int Maxi(int[] a, int n){
+        int Maximum = a[0];
+        for (int i=0; i<a.length; i++){
+            if (a[i] > Maximum){
+                Maximum = a[i];
+            }
+        }
+        return Maximum;
+    }
+    public static void main (String[] args){
+        Scanner sc = new Scanner (System.in);
+        int n = sc.nextInt();
+        int[] a = new int[n];
+
+        for (int i=0; i<n; i++){
+            a[i] = sc.nextInt();
+        }
+        System.out.println("smallest : " + Mini(a,n));
+        System.out.println("largest : " + Maxi(a,n));
+
+    }
+}
